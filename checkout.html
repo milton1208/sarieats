@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .cart-details {
+      margin-bottom: 20px;
+    }
+    .cart-details p {
+      margin: 5px 0;
+    }
+    .total-price {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .checkout-form input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .checkout-button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Checkout</h1>
+
+  
+  <div id="cartDetails" class="cart-details"></div>
+
+  <!-- Total Price -->
+  <div id="totalPrice" class="total-price"></div>
+
+  <!-- Checkout form -->
+  <div class="checkout-form">
+    <h3>Enter your details</h3>
+    <form id="checkoutForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="text" id="address" placeholder="Shipping Address" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <button type="button" class="checkout-button" onclick="processCheckout()">Proceed to Payment</button>
+    </form>
+  </div>
+
+  <script>
+    function loadCartDetails() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let cartDetails = '';
+      let totalPrice = 0;
+
+      // Iterate through the cart to generate the cart details
+      cart.forEach(order => {
+        cartDetails += `<p>Item: ${order.name} - $${order.price}</p>`;
+        totalPrice += order.price;
+      });
+
+      // Show the cart details and total price
+      document.getElementById('cartDetails').innerHTML = cartDetails;
+      document.getElementById('totalPrice').innerHTML = `Total: $${totalPrice}`;
+    }
+
+    // Function to handle the checkout process
+    function processCheckout() {
+      // Get user details from the form
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let address = document.getElementById('address').value;
+      let phone = document.getElementById('phone').value;
+
+      if (!name || !email || !address || !phone) {
+        alert('Please fill in all the details');
+        return;
+      }
+
+      // Get the cart from localStorage
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+      }
+
+      // Process the order (e.g., send data to server)
+      // For this example, we're just displaying an alert
+      alert(`Thank you for your order, ${name}!\nTotal: $${cart.reduce((sum, item) => sum + item.price, 0)}\nWe will send a confirmation email to ${email}.`);
+
+      // After checkout, clear the cart (optional)
+      localStorage.removeItem('cart');
+
+      // Redirect to a confirmation page (optional)
+      window.location.href = 'confirmation.html';
+    }
+
+    // Load cart details when the page loads
+    window.onload = loadCartDetails;
+  </script>
+</body>
+</html>

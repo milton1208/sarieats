@@ -1,0 +1,365 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARIeats</title>
+    <link rel="icon" href="SARIeats\logo\sarieats.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .title{
+            width: 100%;
+            height: 14%;
+            font-size: xx-large;
+            font-family:Arial, Helvetica, sans-serif;
+            background-image:url(D:\html\SARIeats\foods\download.jpeg);
+            background-color: transparent;
+            position:fixed;
+            align-items: center;
+            margin-top:-90px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: -8px;
+        }
+        .logo{
+            width: 100px;
+            height:100px;
+            background-color:rgb(10, 10, 10);
+            border-radius: 50%;
+            
+            margin-left:45%;
+            margin-top: -6%;
+            
+        }
+        .logo > img{
+            width: 100px;
+            height: 100px;
+            object-fit: fill;
+        
+
+        }
+        .card {
+            height: 300px;
+            width: 230px;
+            background-color: rgb(5, 5, 5);
+            border: 3px solid rgb(4, 4, 4);
+            border-radius: 5%;
+            overflow: hidden;
+            padding: -5px;
+            position: relative;
+            margin-top: -10px;
+
+
+            
+            
+        
+        }
+        .container{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-around;   
+            align-items: center;
+        }
+        
+          img{
+            object-fit:cover;
+            height: 300px;
+            width: 230px;
+            transition: 400ms;
+            position: relative;
+            
+            
+        }
+        body{
+            background-image: linear-gradient(180deg,rgb(220, 212, 210),rgb(247, 191, 224),rgb(220, 212, 204) );
+        }
+      .b1{
+        margin-left: 30%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: xx-large;
+        font-style: italic;
+        font-size: 80px;
+
+        }
+        .b2{
+          margin-left: 7%;
+        
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        }
+         .card:hover{
+            background-color: rgb(66, 64, 64);
+            transform: translateY(0px);
+        }
+        .card:hover img{
+            transform: scale(1.2);
+            opacity: 0.2;
+        }
+     .nav-bar{
+        width: 100%;
+        height: 4%;
+        background-color: transparent;
+        margin-top: 100px;
+        backdrop-filter: blur(px);
+        padding: 10px;
+        
+     }
+     ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        
+     }
+     li a{
+        text-decoration: none;
+        color: rgb(4, 4, 4);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: large;
+     }
+       li a:hover{
+        color: #eb2c6b;
+       }
+       .content{
+            opacity: 0;
+            transition: 0.6s;
+            width: 100%;
+            height: 95%;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            position:absolute;
+            flex-direction: column;
+            display: flex;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border: 2px solid whitesmoke;
+            border-radius: 7%;
+            margin-top: 6px;
+           }
+       .content:hover{
+        opacity: 1;}
+        .order{
+            height: 10%;
+            width: 40%;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: rgb(83, 83, 248);
+            color: white;
+            border: 2px solid whitesmoke;
+            border-radius: 15%;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            left: 25%;
+        }
+        .a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        p{
+            margin-left: 3px;
+        }
+        
+    
+    </style>
+    
+</head>
+<body>
+    <div class="title"><b class="b1">SARI</b><b class="b2">eats</b>
+         <div class="logo"><img src="SARIeats\logo\sarieats.png" alt="logo"></div></div>
+         <nav class="nav-bar">
+            <ul>
+                <li><a class="active" href="index.html"><i class="material-icons">home</i><b>Home</b></a></li>
+                <li class="off"><a href="offers.html"><b>Offers</b></a></li>
+                <li><a href="#orders"><b>orders</b></a></li>
+                <li><a href="account.html"><i class="material-icons">person</i><b>Account</b></a></li>
+                <li><a href="login.html"> <i class="material-icons">logout</i><b>Logout</b></a></li>
+            </ul>
+         </nav>
+    <section class="main" style="padding-top: 7%;"> 
+        <div class="container">
+            <div class="card" id="itm1" ><img src="SARIeats\foods\download.jpeg" alt="food">
+            <div class="content"><h3 style="color: white;">Bone curry <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span>
+              <h1 style="color: white;">$699/-</h1></h3>
+              <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button>
+           </div>
+        </div>
+
+            <div class="card"id="itm2"> <img src="SARIeats\foods\download (1).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">chicken salad <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                <p style="color: whitesmoke;">chripsy chicken salad with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+            </div>
+                
+            <div class="card" id="itm3"><img src="SARIeats\foods\download (2).jpeg" alt="food">
+                 <div class="content"><h3 style="color: white;">Bone curry<br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+            </div>
+
+            <div class="card"id="itm4"><img src="SARIeats\foods\download (10).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+
+            <div class="card"id="itm5"><img src="SARIeats\foods\download (4).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+        </div>
+    </section>
+
+
+    <section class="main1"> 
+        <div class="container">
+            <div class="card" id="itm6"><img src="SARIeats\foods\download (5).jpeg" alt="food">  
+                <div class="content"><h3 style="color: white;">Bone curry<br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm7"><img src="SARIeats\foods\download (6).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry<br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm8"><img src="SARIeats\foods\download (7).jpeg" alt="food"> 
+                 <div class="content"><h3 style="color: white;">Bone curry <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+            </div>
+            <div class="card" id="itm9"><img src="SARIeats\foods\download (8).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm10"><img src="SARIeats\foods\download (9).jpeg" alt="food"> 
+                 <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+            </div>
+        </div>
+    </section>
+    <section class="main2"> 
+        <div class="container">
+            <div class="card" id="itm11"><img src="SARIeats\foods\OIP (1).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm12"><img src="SARIeats\foods\OIP (2).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm13"><img src="SARIeats\foods\OIP (3).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm14"><img src="SARIeats\foods\OIP (4).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm15"><img src="SARIeats\foods\OIP (5).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+        </div>
+    </section>
+    <section class="main3"> 
+        <div class="container">
+            <div class="card" id="itm16"><img src="SARIeats\foods\OIP (6).jpeg" alt="food"> 
+                 <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+            </div>
+            <div class="card" id="itm17"><img src="SARIeats\foods\OIP (7).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm18"><img src="SARIeats\foods\OIP (8).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm19"><img src="SARIeats\foods\OIP (9).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm20"><img src="SARIeats\foods\OIP (10).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+        </div>
+    </section>
+    <section class="main4"> 
+        <div class="container">
+            <div class="card" id="itm21"><img src="SARIeats\foods\OIP (11).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry   <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm22"><img src="SARIeats\foods\OIP (12).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm23"><img src="SARIeats\foods\OIP.jpeg" alt="food"> 
+                 <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button>
+                 </div>
+            </div>
+            <div class="card" id="itm24"><img src="SARIeats\foods\OIP (13).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm25"><img src="SARIeats\foods\OIP (14).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry   <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+        </div>
+    </section>
+    <section class="main5"> 
+        <div class="container">
+            <div class="card" id="itm26"><img src="SARIeats\foods\new.jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm27"><img src="SARIeats\foods\new1.jpeg" alt="food"> 
+                 <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+            </div>
+            <div class="card" id="itm28"><img src="SARIeats\foods\OIP (15).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry   <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm29"><img src="SARIeats\foods\OIP (17).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+            <div class="card" id="itm30"><img src="SARIeats\foods\OIP (18).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry  <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+        </div>
+    </section>
+    <section class="main" style="padding-top: 7%;"> 
+        <div class="container">
+            <div class="card" id="itm1" ><img src="SARIeats\foods\download.jpeg" alt="food">
+            <div class="content"><h3 style="color: white;">Bone curry <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span>
+              <h1 style="color: white;">$699/-</h1></h3>
+              <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button>
+           </div>
+        </div>
+
+            <div class="card"id="itm2"> <img src="SARIeats\foods\download (1).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">chicken salad <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                <p style="color: whitesmoke;">chripsy chicken salad with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+            </div>
+                
+            <div class="card" id="itm3"><img src="SARIeats\foods\download (2).jpeg" alt="food">
+                 <div class="content"><h3 style="color: white;">Bone curry<br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+            </div>
+
+            <div class="card"id="itm4"><img src="SARIeats\foods\download (10).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+
+            <div class="card"id="itm5"><img src="SARIeats\foods\download (4).jpeg" alt="food">
+                <div class="content"><h3 style="color: white;">Bone curry <br><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color: yellow;">&#9733;</span><span style="color:transprant;">&#9733;</span><h1 style="color: white;">$699/-</h1></h3>
+                    <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat </b></p><button class="order" style="color: aqua;"><a class="a" >order now</a></button></div>
+                </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>

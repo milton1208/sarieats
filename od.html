@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Modal background */
+    #checkoutModal {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+        padding-top: 60px;
+      }
+      
+      /* Modal content */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+      }
+      
+      /* Close button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      </style>
+</head>
+<body>
+    
+<div class="card" id="itm1">
+    <img src="SARIeats/foods/download.jpeg" alt="food">
+    <div class="content">
+      <h3 style="color: white;">Bone curry 
+        <span style="color: yellow;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </h3>
+      <h1 style="color: white;">$699/-</h1>
+      <p style="color: whitesmoke;">chicken and veg mixed curry with <b>no fat</b></p>
+      <button class="order" style="color: aqua;" onclick="addToCart('Bone curry', 699)">Order Now</button>
+    </div>
+  </div>
+  
+  <!-- Modal for checkout -->
+  <div id="checkoutModal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Order Details</h2>
+      <p id="orderDetails"></p>
+      <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+  </div>
+  <script>
+    // Array to hold the cart items
+let cart = [];
+
+// Function to add item to cart
+function addToCart(itemName, price) {
+  // Create an order object
+  let order = {
+    name: itemName,
+    price: price
+  };
+
+  // Add the order to the cart array
+  cart.push(order);
+
+  // Show order details in the modal
+  showOrderDetails();
+}
+
+// Function to display the order details in the modal
+function showOrderDetails() {
+  let orderDetails = '';
+  let totalPrice = 0;
+
+  // Iterate through the cart and create a string of order details
+  cart.forEach(order => {
+    orderDetails += `<p>Item: ${order.name} - $${order.price}</p>`;
+    totalPrice += order.price;
+  });
+
+  // Add the total price to the details
+  orderDetails += `<hr><h3>Total: $${totalPrice}</h3>`;
+
+  // Display the details in the modal
+  document.getElementById('orderDetails').innerHTML = orderDetails;
+
+  // Show the modal
+  document.getElementById('checkoutModal').style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById('checkoutModal').style.display = 'none';
+}
+
+// Function to proceed to checkout
+function proceedToCheckout() {
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+    closeModal();
+    return;
+  }
+
+  // Redirect to the checkout page (you can adjust this URL)
+  window.location.href = 'checkout.html';
+}
+// Function to add item to cart and save it to localStorage
+function addToCart(itemName, price) {
+    // Create an order object
+    let order = {
+      name: itemName,
+      price: price
+    };
+  
+    // Get the current cart from localStorage (if it exists)
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    // Add the new order to the cart
+    cart.push(order);
+  
+    // Save the updated cart back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+  
+    // Show order details in the modal
+    showOrderDetails();
+  }
+  
+  </script>
+</body>
+</html>
+  

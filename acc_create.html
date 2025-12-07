@@ -1,0 +1,138 @@
+
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.SARIeats.com</title>
+    <link rel="icon" href="SARIeats\logo\sarieats.png">
+    <style>
+        body{
+            
+            background-size: cover;
+        }
+        .container{
+            height: 95%;
+            width: 50%;
+            background-color:transparent;
+            justify-content: center;
+            align-items: center;
+            margin: 35px;
+            border:2px solid whitesmoke;
+            border-radius: 10px;
+        }
+        .logo{
+            height: 15%;
+            width: 16%;
+            background-color:whitesmoke;
+            border-radius: 60%;
+            margin-left: 40%;
+            margin-top: 10px;
+        
+            
+
+        }
+    .logo > img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    #name{
+        margin-top: 3%;
+        margin-left: 15%;
+        height: 8%;
+        width: 60%;
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        border-radius: 20px;
+        border:2px solid rgb(230, 222, 222);
+        padding-left: 30px;
+    }
+    .sign{
+        text-decoration: none;
+        color: rgb(93, 169, 250);
+        margin-left: 4px;
+    }
+    h3{
+        margin-left: 25%;
+        color: aliceblue;
+    }
+    h1{
+        margin-left: 35%;
+        margin-top: -10px;
+    }
+    .btn{
+        width: 60%;
+        height: 8%;
+        border-radius: 20px;
+        margin-left: 15%;
+        background-color: whitesmoke;
+    }
+    .forget{
+        margin-left: 55%;
+        color: whitesmoke;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+::-webkit-input-placeholder{
+    color: aliceblue;
+}
+#name:hover{
+    border: 2px solid blue;
+    
+}
+.btn:hover{
+    background-color: aqua;
+}
+h3{
+    margin-top: -10px;
+}
+.al{
+    margin-top: 10px;
+
+}
+.create{
+    margin-left: 80px;
+
+}
+    </style>
+</head>
+<body background="img\089bce0b11f9a94c850061e14843f511.jpg">
+    <div class="container">
+      <div class="logo"><img src="SARIeats\logo\sarieats.png" alt="logo"></div>
+       <h1 style="color: white;"><b> SARI</b> eats</h1>
+     <h3 class="create"><b> Create Account</b></h3>
+     <form method="POST"  action="acc.php">
+      <div class="input">
+        <input type="text" name="name" id="name" placeholder="Fullname"required>
+        <input type="text" name="username" id="name" placeholder="Username">
+        <input type="tel" inputmode="numeric" name="phonenumber" id="name" placeholder="Mobile no"  pattern="\d{10}" maxlength="10" title="Ten numbers" required>
+        <input type="password" name="upassword" id="name" placeholder="Password"required>
+        <input type="password" name="cpossword" id="name" placeholder="confirm Password"required>
+        <br>
+        <br>
+         <input type="submit" value="create" class="btn" onclick="validatePasswords()">
+        <h3 class="al">Already have an account <a href="login.html" class="sign">  login here</a></h3>
+        
+
+       </div>
+     </form>
+
+    </div>
+    <script>
+        function validatePasswords() {
+            var password = document.getElementById("upassword").value;
+            var confirmPassword = document.getElementById("cpossword").value;
+    
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true; 
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.SARIeats.com</title>
+    <link rel="icon" href="SARIeats\logo\sarieats.png">
+    <style>
+        body{
+            
+            background-size: cover;
+        }
+        .container{
+            height: 70%;
+            width: 30%;
+            background-color:transparent;
+            justify-content: center;
+            align-items: center;
+            margin: 80px;
+            margin-left: 450px;
+            margin-top: 100px;
+            backdrop-filter: blur(10px);
+            background: rgba(35, 35, 35, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            padding-top: 0.2%;
+
+        }
+        .logo{
+            height: 23%;
+            width: 28%;
+            background-color:whitesmoke;
+            border-radius: 60%;
+            margin-left: 35%;
+            margin-top: 2%;
+            position: relative;
+            
+        
+            
+
+        }
+    .logo > img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    #name{
+        margin-top: 4%;
+        margin-left: 20%;
+        height: 8%;
+        width: 60%;
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        border-radius: 20px;
+        border:2px solid rgb(230, 222, 222);
+        padding-left: 30px;
+    }
+    .sign{
+        text-decoration: none;
+        color: rgb(93, 169, 250);
+        margin-left: 4px;
+    }
+    h3{
+        margin-left: 20%;
+        color: aliceblue;
+    }
+    h1{
+        margin-left: 35%;
+    }
+    .btn{
+        width: 60%;
+        height: 8%;
+        border-radius: 20px;
+        margin-left: 20%;
+    }
+    .forget{
+        margin-left: 55%;
+        color: whitesmoke;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+::-webkit-input-placeholder{
+    color: aliceblue;
+}
+#name:hover{
+    border: 2px solid blue;
+}
+.btn:hover{
+    background-color: aqua;
+}
+</style>
+</head>
+<body background="SARIeats\foods\wp3108378.jpg">
+    <form action="check.php" method="post">
+    <div class="container">
+    <div class="logo"><img src="SARIeats\logo\sarieats.png" alt="logo"></div>
+    <h1 style="color: white;"><b> SARI</b> eats</h1>
+    <div class="input">
+        <input type="text" name="username" id="name" placeholder="Username"required>
+        <input type="password" name="password" id="name" placeholder="Password"required><br><br>
+        
+        <button class="btn" type="submit"> login</button>
+
+        <h3>Dont have an account ? <a href="acc_create.html" class="sign"> create account</a></h3>
+    </div>
+    </div></form>
+</body>
+</html>
